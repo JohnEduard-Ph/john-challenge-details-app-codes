@@ -54,10 +54,15 @@ const ChallengeDetails = () => {
 
   const leaderboard = [
     { rank: 1, name: 'Net-roc Team 10', gems: 5, points: 3000 },
-    { rank: 2, name: 'Net-roc Team 3', gems: 0, points: 0 },
-    { rank: 3, name: 'Net-roc Team 1', gems: 0, points: 0 },
+    { rank: 2, name: 'Net-roc Team 3', gems: 0, points: 2000 },
+    { rank: 3, name: 'Net-roc Team 1', gems: 0, points: 1000 },
     { rank: 4, name: 'Net-roc Team 2', gems: 0, points: 0 },
-    { rank: 5, name: 'Net-roc Team 4', gems: 0, points: 0 }
+    { rank: 5, name: 'Net-roc Team 4', gems: 0, points: 0 },
+    { rank: 6, name: 'Net-roc Team 5', gems: 0, points: 0 },
+    { rank: 7, name: 'Net-roc Team 6', gems: 0, points: 0 },
+    { rank: 8, name: 'Net-roc Team 7', gems: 0, points: 0 },
+    { rank: 9, name: 'Net-roc Team 8', gems: 0, points: 0 },
+    { rank: 10, name: 'Net-roc Team 9', gems: 0, points: 0 }
   ];
 
   const friends = [
