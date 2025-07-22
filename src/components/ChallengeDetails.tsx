@@ -258,9 +258,7 @@ const ChallengeDetails = () => {
                 </div>
               ))}
 
-              <div className="pt-4 border-t">
-                <h4 className="font-medium text-primary mb-4">Goal!</h4>
-              </div>
+              <h4 className="font-medium text-primary mb-4 mt-6">Goal!</h4>
 
               <div className="space-y-3">
                 <Button
