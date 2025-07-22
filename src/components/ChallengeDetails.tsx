@@ -246,7 +246,7 @@ const ChallengeDetails = () => {
                       <Button
                         size="sm"
                         variant={item.completed ? "secondary" : "outline"}
-                        className="text-xs"
+                        className={`text-xs ${index === 0 && item.completed ? 'bg-[#A42138] text-white hover:bg-[#A42138]/90' : ''}`}
                         disabled={!item.completed}
                       >
                         {item.completed ? 'Claim Reward' : 'Claim Reward'}
