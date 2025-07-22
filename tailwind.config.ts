@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				timeline: {
+					active: 'hsl(var(--timeline-active))',
+					completed: 'hsl(var(--timeline-completed))',
+					inactive: 'hsl(var(--timeline-inactive))',
+					goal: 'hsl(var(--timeline-goal))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
