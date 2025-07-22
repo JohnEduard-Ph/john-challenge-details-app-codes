@@ -361,7 +361,11 @@ const ChallengeDetails = () => {
                 <div key={index} className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-sm">{stage.title}</span>
-                    {!stage.completed && (
+                    {stage.completed ? (
+                      <Button size="sm" variant="secondary" disabled className="text-xs">
+                        Done
+                      </Button>
+                    ) : (
                       <Button size="sm" variant="outline" className="text-xs">
                         Submit
                       </Button>
@@ -382,9 +386,6 @@ const ChallengeDetails = () => {
                           <span key={fileIndex} className="text-xs text-center">{file}</span>
                         ))}
                       </div>
-                      <Button size="sm" variant="secondary" disabled className="text-xs">
-                        Done
-                      </Button>
                     </div>
                   ) : (
                     <div className="flex items-center justify-center w-16 h-16 bg-muted rounded border-2 border-dashed border-gray-300">
