@@ -374,8 +374,12 @@ const ChallengeDetails = () => {
                       <div className="flex space-x-2">
                         {stage.files.map((file, fileIndex) => (
                           <div key={fileIndex} className="w-16 h-16 bg-muted rounded flex items-center justify-center">
-                            <span className="text-xs text-center">{file}</span>
                           </div>
+                        ))}
+                      </div>
+                      <div className="flex space-x-2">
+                        {stage.files.map((file, fileIndex) => (
+                          <span key={fileIndex} className="text-xs text-center">{file}</span>
                         ))}
                       </div>
                       <Button size="sm" variant="secondary" disabled className="text-xs">
