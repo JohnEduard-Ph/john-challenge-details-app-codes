@@ -12,6 +12,8 @@ import stage2Image from '@/assets/stage2-swimming.jpg';
 import stage3Image from '@/assets/stage3-cycling.jpg';
 import stage4Image from '@/assets/stage4-hiking.jpg';
 import stage5Image from '@/assets/stage5-goal.jpg';
+import running1Image from '@/assets/running-1.jpg';
+import running2Image from '@/assets/running-2.jpg';
 
 const ChallengeDetails = () => {
   const [currentStage, setCurrentStage] = useState(0);
@@ -80,7 +82,10 @@ const ChallengeDetails = () => {
     { title: 'Swim total of 25km', completed: false, files: [] },
     { title: 'Cycle 300km', completed: false, files: [] },
     { title: 'Hiking up Bt Tim-ah Hill', completed: false, files: [] },
-    { title: 'Accumulate total of 100k steps.', completed: true, files: ['IMG_2023032.jpg', 'IMG_2023033.jpg'] }
+    { title: 'Accumulate total of 100k steps.', completed: true, files: [
+      { name: 'IMG_2023032.jpg', image: running1Image },
+      { name: 'IMG_2023033.jpg', image: running2Image }
+    ] }
   ];
 
   const friendsList = [
@@ -380,13 +385,18 @@ const ChallengeDetails = () => {
                       <div className="text-xs text-muted-foreground">July 22, 2025</div>
                       <div className="flex space-x-2">
                         {stage.files.map((file, fileIndex) => (
-                          <div key={fileIndex} className="w-16 h-16 bg-muted rounded flex items-center justify-center">
+                          <div key={fileIndex} className="w-16 h-16 bg-muted rounded flex items-center justify-center overflow-hidden">
+                            <img 
+                              src={file.image} 
+                              alt={file.name}
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                         ))}
                       </div>
                       <div className="flex space-x-2">
                         {stage.files.map((file, fileIndex) => (
-                          <span key={fileIndex} className="text-xs text-center">{file}</span>
+                          <span key={fileIndex} className="text-xs text-center">{file.name}</span>
                         ))}
                       </div>
                     </div>
