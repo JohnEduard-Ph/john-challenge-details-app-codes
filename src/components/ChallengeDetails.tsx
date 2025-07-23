@@ -396,15 +396,11 @@ const ChallengeDetails = () => {
                             />
                           </div>
                         ))}
-                        <div className="flex items-center justify-center w-16 h-16 bg-muted rounded border-2 border-dashed border-gray-300">
-                          <Plus className="h-6 w-6 text-muted-foreground" />
-                        </div>
                       </div>
                       <div className="flex space-x-2">
                         {stage.files.map((file, fileIndex) => (
                           <span key={fileIndex} className="text-xs text-center">{file.name}</span>
                         ))}
-                        <span className="text-xs text-center w-16">Add file</span>
                       </div>
                     </div>
                   ) : (
