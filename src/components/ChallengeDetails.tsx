@@ -377,7 +377,11 @@ const ChallengeDetails = () => {
                         Done
                       </Button>
                     ) : (
-                      <Button size="sm" variant="outline" className="text-xs">
+                      <Button 
+                        size="sm" 
+                        variant="outline" 
+                        className={`text-xs ${index === 0 ? 'bg-[#A42138] text-white hover:bg-[#A42138]/90 border-[#A42138]' : ''}`}
+                      >
                         Submit
                       </Button>
                     )}
