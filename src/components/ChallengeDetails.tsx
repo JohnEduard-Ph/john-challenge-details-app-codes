@@ -14,6 +14,7 @@ import stage4Image from '@/assets/stage4-hiking.jpg';
 import stage5Image from '@/assets/stage5-goal.jpg';
 import running1Image from '@/assets/running-1.jpg';
 import running2Image from '@/assets/running-2.jpg';
+import swimmingActivityImage from '@/assets/swimming-activity.jpg';
 
 const ChallengeDetails = () => {
   const [currentStage, setCurrentStage] = useState(0);
@@ -401,8 +402,18 @@ const ChallengeDetails = () => {
                       </div>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center w-16 h-16 bg-muted rounded border-2 border-dashed border-gray-300">
-                      <Plus className="h-6 w-6 text-muted-foreground" />
+                    <div className="space-y-3">
+                      <div className="w-16 h-16 bg-muted rounded flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={swimmingActivityImage} 
+                          alt="Swimming activity"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <span className="text-xs text-center">swimming_session.jpg</span>
+                      <div className="flex items-center justify-center w-16 h-16 bg-muted rounded border-2 border-dashed border-gray-300">
+                        <Plus className="h-6 w-6 text-muted-foreground" />
+                      </div>
                     </div>
                   )}
                 </div>
