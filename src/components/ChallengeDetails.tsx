@@ -162,7 +162,7 @@ const ChallengeDetails = () => {
                   className={`w-4 h-4 rounded-full border-2 transition-all cursor-pointer ${getTimelineCircleColor(index)}`}
                   onClick={() => setCurrentStage(index)}
                 />
-                <span className="text-xs text-white mt-1 font-medium">{stage.label}</span>
+                <span className="text-xs text-white mt-1 font-medium w-12 text-center whitespace-nowrap">{stage.label}</span>
               </div>
             ))}
           </div>
