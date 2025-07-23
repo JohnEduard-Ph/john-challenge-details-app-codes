@@ -14,6 +14,7 @@ import stage4Image from '@/assets/stage4-hiking.jpg';
 import stage5Image from '@/assets/stage5-goal.jpg';
 import running1Image from '@/assets/running-1.jpg';
 import running2Image from '@/assets/running-2.jpg';
+import swimmingImage from '@/assets/swimming-activity.jpg';
 
 const ChallengeDetails = () => {
   const [currentStage, setCurrentStage] = useState(0);
@@ -79,7 +80,9 @@ const ChallengeDetails = () => {
   ];
 
   const participateStages = [
-    { title: 'Swim total of 25km', completed: false, files: [] },
+    { title: 'Swim total of 25km', completed: false, files: [
+      { name: 'swimming_activity.jpg', image: swimmingImage }
+    ] },
     { title: 'Cycle 300km', completed: false, files: [] },
     { title: 'Hiking up Bt Tim-ah Hill', completed: false, files: [] },
     { title: 'Accumulate total of 100k steps.', completed: true, files: [
@@ -401,8 +404,22 @@ const ChallengeDetails = () => {
                       </div>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center w-16 h-16 bg-muted rounded border-2 border-dashed border-gray-300">
-                      <Plus className="h-6 w-6 text-muted-foreground" />
+                    <div className="flex items-center space-x-2">
+                      {stage.files.length > 0 && (
+                        <div className="space-y-1">
+                          <div className="w-16 h-16 bg-muted rounded flex items-center justify-center overflow-hidden">
+                            <img 
+                              src={stage.files[0].image} 
+                              alt={stage.files[0].name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <span className="text-xs text-center block">{stage.files[0].name}</span>
+                        </div>
+                      )}
+                      <div className="flex items-center justify-center w-16 h-16 bg-muted rounded border-2 border-dashed border-gray-300">
+                        <Plus className="h-6 w-6 text-muted-foreground" />
+                      </div>
                     </div>
                   )}
                 </div>
