@@ -14,6 +14,7 @@ import stage4Image from '@/assets/stage4-hiking.jpg';
 import stage5Image from '@/assets/stage5-goal.jpg';
 import running1Image from '@/assets/running-1.jpg';
 import running2Image from '@/assets/running-2.jpg';
+import swimmingImage from '@/assets/swimming.jpg';
 
 const ChallengeDetails = () => {
   const [currentStage, setCurrentStage] = useState(0);
@@ -79,7 +80,9 @@ const ChallengeDetails = () => {
   ];
 
   const participateStages = [
-    { title: 'Swim total of 25km', completed: false, files: [] },
+    { title: 'Swim total of 25km', completed: true, files: [
+      { name: 'IMG_2023034.jpg', image: swimmingImage }
+    ] },
     { title: 'Cycle 300km', completed: false, files: [] },
     { title: 'Hiking up Bt Tim-ah Hill', completed: false, files: [] },
     { title: 'Accumulate total of 100k steps.', completed: true, files: [
